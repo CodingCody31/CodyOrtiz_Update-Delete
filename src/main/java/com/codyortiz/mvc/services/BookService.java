@@ -33,9 +33,9 @@ public class BookService {
             return null;
         }
     }
-	public void updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
+	public Book updateBook(Long id, String title, String desc, String lang, Integer numOfPages) {
 		Book book = new Book(id, title, desc, lang, numOfPages);
-    	bookRepository.save(book);
+		return bookRepository.save(book);
 	}
 	public void deleteBook(Long id) {
 		bookRepository.deleteById(id);

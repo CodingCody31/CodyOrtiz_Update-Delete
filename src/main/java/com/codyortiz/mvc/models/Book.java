@@ -1,6 +1,6 @@
 package com.codyortiz.mvc.models;
 
-import java.sql.Date;
+
 import java.util.Calendar;
 
 import javax.persistence.Column;
@@ -39,7 +39,7 @@ public class Book {
 	    
 
 	    public Book() {
-			super();
+			
 		}
 	    
 	    

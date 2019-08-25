@@ -16,7 +16,6 @@ public class BookApi {
 	private final BookService bookService;
 
 	public BookApi(BookService bookService) {
-		super();
 		this.bookService = bookService;
 	}
 	
@@ -40,8 +39,8 @@ public class BookApi {
 	 
 	  @RequestMapping(value="/api/books/{id}", method=RequestMethod.PUT)
 	    public Book update(@PathVariable("id") Long id, @RequestParam(value="title") String title, @RequestParam(value="description") String desc, @RequestParam(value="language") String lang, @RequestParam(value="pages") Integer numOfPages) {
-	      Book book = new Book(id, title, desc, lang, numOfPages);  
-		  return bookService.createBook(book);
+		  Book book = bookService.updateBook(id, title, desc, lang, numOfPages);
+	        return book;
 	        
 	    }
 	    
